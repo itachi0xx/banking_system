@@ -50,3 +50,10 @@ def search_customer(customers: dict, customer_email: str):
         if info["email"] == customer_email:
             return info
     raise CustomerNotFoundError(f"Customer not found: {customer_email}")
+
+
+def get_customer_account_ids(customers: dict, customer_id: str) -> list:
+    if customer_id not in customers:
+        raise CustomerNotFoundError(f"Customer not found: {customer_id}")
+
+    return customers[customer_id]["account_ids"]
