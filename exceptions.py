@@ -12,3 +12,7 @@ class DuplicateCustomerError(BankingError):
 
 class CustomerNotFoundError(BankingError):
     pass
+
+
+class AccountNotFoundError(BankingError):
+    pass
