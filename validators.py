@@ -18,7 +18,7 @@ def validate_name(name: str) -> str:
 
 def validate_email(email: str) -> str:
 
-    email = email.strip()
+    email = email.strip().lower()
 
     if not EMAIL_PATTERN.match(email):
         raise ValidationError("Invalid email format")
