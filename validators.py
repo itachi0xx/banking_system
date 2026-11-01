@@ -34,3 +34,30 @@ def validate_contact(contact: str):
     if len(contact) != 11:
         raise ValidationError("Contact must contain 11 digits")
     return contact
+
+
+def validate_currency(currency: str) -> str:
+    currency_list = ["EGP", "USD", "AED", "EUR", "SAR"]
+    currency = currency.strip().upper()
+
+    if not currency:
+        raise ValidationError("currency can't be empty")
+
+    if not currency in currency_list:
+        raise ValidationError("Not supported currency")
+
+    return currency
+
+
+def validate_account_status(status: str) -> str:
+    status_list = ["active", "closed", "frozen"]
+
+    status = status.strip().lower()
+
+    if not status:
+        raise ValidationError("status can't be empty")
+
+    if not status in status_list:
+        raise ValidationError("Not supported status")
+
+    return status
