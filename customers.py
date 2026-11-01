@@ -43,3 +43,10 @@ def get_customer(customers: dict, customer_id: str) -> dict:
         return customers[customer_id]
     except KeyError:
         raise CustomerNotFoundError(f"Customer not found: {customer_id}")
+
+
+def search_customer(customers: dict, customer_email: str):
+    for ID, info in customers.items():
+        if info["email"] == customer_email:
+            return info
+    raise CustomerNotFoundError(f"Customer not found: {customer_email}")
