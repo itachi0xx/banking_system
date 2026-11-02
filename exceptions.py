@@ -36,3 +36,7 @@ class SameAccountError(BankingError):
 
 class InvalidTransactionError(BankingError):
     pass
+
+
+def DataPersistenceError(BankingError):
+    pass
