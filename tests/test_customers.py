@@ -26,3 +26,16 @@ def test_duplicate_customer():
         pass
     else:
         assert False, "Expected DuplicateCustomerError"
+
+
+def test_registered_customer_can_open_account():
+    from accounts import create_account
+
+    customers, accounts = {}, {}
+
+    customer_id = register_customer(
+        customers, "Ahmed Ali", "ahmed@gmail.com", "01012345678"
+    )
+    account_id = create_account(accounts, customers, customer_id, "EGP")
+
+    assert account_id in customers[customer_id]["account_ids"]

@@ -4,7 +4,7 @@
             "name": "Alex Morgan",
             "email": "alex.morgan@example.com",
             "contact": "01000000001",
-            "accounts_ids": [
+            "account_ids": [
                 "A001"
             ]
         },
@@ -12,7 +12,7 @@
             "name": "Sam Carter",
             "email": "sam.carter@example.com",
             "contact": "01000000002",
-            "accounts_ids": [
+            "account_ids": [
                 "A002"
             ]
         },
@@ -20,7 +20,7 @@
             "name": "Jordan Lee",
             "email": "jordan.lee@example.com",
             "contact": "01000000003",
-            "accounts_ids": [
+            "account_ids": [
                 "A003"
             ]
         }

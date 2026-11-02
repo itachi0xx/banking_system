@@ -31,7 +31,7 @@ def register_customer(customers: dict, name: str, email: str, contact: str) -> s
         "name": name,
         "email": email,
         "contact": contact,
-        "accounts_ids": [],
+        "account_ids": [],
     }
 
     return customer_id
