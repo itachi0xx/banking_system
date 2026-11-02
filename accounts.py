@@ -33,8 +33,7 @@ def create_account(
         "status": "active",
     }
 
-    customers[customer_id]["accounts_ids"].append(account_id)
-
+    customers[customer_id]["account_ids"].append(account_id)
     return account_id
 
 

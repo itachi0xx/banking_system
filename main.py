@@ -80,9 +80,6 @@ def main():
         except BankingError as e:
             print("Banking error:", e)
 
-        except DataPersistenceError as e:
-            print("Storage error:", e)
-
 
 if __name__ == "__main__":
     main()

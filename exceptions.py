@@ -38,5 +38,5 @@ class InvalidTransactionError(BankingError):
     pass
 
 
-def DataPersistenceError(BankingError):
+class DataPersistenceError(BankingError):
     pass

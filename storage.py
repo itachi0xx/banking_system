@@ -1,4 +1,5 @@
 import json
+from exceptions import DataPersistenceError
 
 PATH = "/media/atiyah/Garage/FAANG ROAD 101/Phase 1 /CS50P/Projects/toys/banking_system/data/bank_data.json"
 
@@ -19,5 +20,6 @@ def load_data():
 
     except FileNotFoundError:
         return {}, {}, {}
-    except json.JSONDecodeError:
-        return {}, {}, {}
+
+    except (json.JSONDecodeError, KeyError, TypeError) as e:
+        raise DataPersistenceError(f"Could not load banking data: {e}") from e
