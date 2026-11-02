@@ -1,0 +1,98 @@
+{
+    "customers": {
+        "C001": {
+            "name": "Alex Morgan",
+            "email": "alex.morgan@example.com",
+            "contact": "01000000001",
+            "accounts_ids": [
+                "A001"
+            ]
+        },
+        "C002": {
+            "name": "Sam Carter",
+            "email": "sam.carter@example.com",
+            "contact": "01000000002",
+            "accounts_ids": [
+                "A002"
+            ]
+        },
+        "C003": {
+            "name": "Jordan Lee",
+            "email": "jordan.lee@example.com",
+            "contact": "01000000003",
+            "accounts_ids": [
+                "A003"
+            ]
+        }
+    },
+    "accounts": {
+        "A001": {
+            "customer_id": "C001",
+            "currency": "EGP",
+            "balance": 300,
+            "status": "active"
+        },
+        "A002": {
+            "customer_id": "C002",
+            "currency": "USD",
+            "balance": 500,
+            "status": "active"
+        },
+        "A003": {
+            "customer_id": "C003",
+            "currency": "EGP",
+            "balance": 5500,
+            "status": "active"
+        }
+    },
+    "transactions": {
+        "T001": {
+            "type": "deposit",
+            "account_id": "A001",
+            "amount": 1000,
+            "status": "success",
+            "timestamp": "2026-11-01T23:50:35.691852+00:00",
+            "transfer_id": null
+        },
+        "T002": {
+            "type": "deposit",
+            "account_id": "A002",
+            "amount": 500,
+            "status": "success",
+            "timestamp": "2026-11-01T23:50:56.883846+00:00",
+            "transfer_id": null
+        },
+        "T003": {
+            "type": "deposit",
+            "account_id": "A003",
+            "amount": 5000,
+            "status": "success",
+            "timestamp": "2026-11-01T23:51:25.179611+00:00",
+            "transfer_id": null
+        },
+        "T004": {
+            "type": "withdraw",
+            "account_id": "A001",
+            "amount": 200,
+            "status": "success",
+            "timestamp": "2026-11-01T23:52:10.036017+00:00",
+            "transfer_id": null
+        },
+        "T005": {
+            "type": "transfer_out",
+            "account_id": "A001",
+            "amount": 500,
+            "status": "success",
+            "timestamp": "2026-11-01T23:52:41.555966+00:00",
+            "transfer_id": "TR001"
+        },
+        "T006": {
+            "type": "transfer_in",
+            "account_id": "A003",
+            "amount": 500,
+            "status": "success",
+            "timestamp": "2026-11-01T23:52:41.556026+00:00",
+            "transfer_id": "TR001"
+        }
+    }
+}
