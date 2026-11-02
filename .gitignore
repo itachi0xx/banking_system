@@ -1,1 +1,18 @@
-*__pycache__
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Test / tooling caches
+.pytest_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Temp files from atomic saves
+*.tmp
